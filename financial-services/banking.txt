@@ -1,0 +1,29 @@
+TD Canada/USA Banking
+__________________________________________________
+td.com
+www.td.com
+
+authentication.td.com
+graphql-td.mss.td.com
+
+a0064.td.com
+
+wup.td.com
+tmx.td.com
+
+
+ScotiaBank Canada/USA Banking
+__________________________________________________
+
+scotiabank.com
+www.scotiabank.com 
+scotiabankcolpatria.com
+
+
+
+BMO Canada/USA Banking
+__________________________________________________
+
+bmo.com
+bmo.secure-login.com
+bmo.com.something-else.tld
