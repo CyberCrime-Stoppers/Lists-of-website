@@ -1,0 +1,6 @@
+clamav.net
+www.clamav.net
+
+database.clamav.net
+
+
