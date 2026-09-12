@@ -1,0 +1,6 @@
+ubuntu.com
+www.ubuntu.com
+
+.snapcraft.io
+api.snapcraft.io
+
