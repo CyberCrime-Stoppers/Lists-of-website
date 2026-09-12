@@ -10,3 +10,6 @@ path3.xtracloud.net
 
 Under the hood of Androids OS System - with Google
 firebaseinstallations.googleapis.com
+
+Android Mobile Verification System. to communicate back to Google Head Courters.
+phonedeviceverification-pa.googleapis.com
