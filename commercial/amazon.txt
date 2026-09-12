@@ -1,0 +1,5 @@
+Amazon CDN Systems
+
+Mobile CDN - Makes mobile networks faster - but it comes at a cost of no privacy
+mobile-consent-manager.s3.amazonaws.com
+
