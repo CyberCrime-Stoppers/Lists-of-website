@@ -1,8 +1,12 @@
-google.com
-www.google.com
+
+Google Connection with Android and it's Components 
+android.apis.google.com
 
 
 Google Android(s) Notification System -- Google tracks and Reads Android Users Notifications
 path1.xtracloud.net
 path2.xtracloud.net
 path3.xtracloud.net
+
+Under the hood of Androids OS System - with Google
+firebaseinstallations.googleapis.com
