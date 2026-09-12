@@ -5,3 +5,9 @@
       samsungrs.com
       samsungosp.com
       
+      
+      poll.gras.samsungdm.com
+      
+      capi.samsungcloud.com
+      
+      dc.di.atlas.samsung.com
