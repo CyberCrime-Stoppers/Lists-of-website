@@ -1,0 +1,8 @@
+google.com
+www.google.com
+
+
+Google Android(s) Notification System -- Google tracks and Reads Android Users Notifications
+path1.xtracloud.net
+path2.xtracloud.net
+path3.xtracloud.net
