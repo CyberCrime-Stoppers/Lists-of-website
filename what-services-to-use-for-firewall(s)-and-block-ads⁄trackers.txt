@@ -1,0 +1,15 @@
+You got
+
+uBlockDNS
+https://ublockdns.com/
+Block Ads at the DNS Level
+
+Info: Blocks ads, trackers, and malware before they reach you. Every device you own, encrypted and fast. No email required. Free.
+
+
+Pi-Hole
+https://pi-hole.net/
+Instead of browser plugins or other software on each computer,
+
+install Pi-hole in one place and your entire network is protected. Block in-app advertisements.
+
