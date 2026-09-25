@@ -1,0 +1,16 @@
+			
+		* Qualcomm's XTRA assistance data service — part of the A-GPS stack on Qualcomm-based Android phones:
+		
+	 	    * The gpsOneXTRA engine in Qualcomm's modem/baseband firmware periodically downloads GPS assistance data 
+	 	      (ephemeris, almanac, coarse time/position estimates) from path1/2/3.xtracloud.net to speed up GPS satellite lock
+	 	      
+	 	    * The path1/path2/path3 prefix pattern is just geographic/load-balanced mirror selection 
+	 	      — same trick as Google's alt1–alt8-mtalk
+	 	      
+	 	    * Critically, this comes from the firmware/modem layer. 
+	 	      the /e/OS, CalyxOS, and GrapheneOS communities kept seeing it survives even on de-Googled ROMs, 
+	 	      it's baked into the Qualcomm chip stack (/e/OS community, CalyxOS GitLab issue #370)
+	 	      
+	 	      		- path1.xtracloud.net
+				- path2.xtracloud.net
+				- path3.xtracloud.net
