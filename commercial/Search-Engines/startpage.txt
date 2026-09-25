@@ -4,8 +4,10 @@ www.startpage.com
 
 
 Countries
-europe: eu.startpage.com
+europe:: eu.startpage.com
 United Kingdom:: uk.startpage.com
-
+United States:: https://us.startpage.com/
+Russia: https://startpage.ru
+China: https://startpage.cn
 
 cdn.startpage.com
