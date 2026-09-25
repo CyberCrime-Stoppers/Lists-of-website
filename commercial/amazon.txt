@@ -1,5 +1,18 @@
-Amazon CDN Systems
+			
+		* Amazon Advertisements and services delivery System's
+			
+			
+			**** Description: mobile-consent-manager.s3.amazonaws.com — Amazon S3 bucket serving advertising/marketing consent state for 
+			     Amazon mobile apps and Fire OS devices (e.g., interest-based-ad opt-in/opt-out settings). Part of Amazon's 
+			     ad-personalization infrastructure rather than a general-purpose CDN. Safe to block for privacy-conscious setups; 
+			     possible side effect is repeated retries or apps falling back to default (opted-in) ad behaviors until the check succeeds or times out.
+			
+			* --> Safe to block for privacy-conscious setups" Blocking the domain stops your device from checking in with Amazon's consent-tracking endpoint.
+			      The requests themselves aren't leaking browsing history, but you're removing one touchpoint in Amazon's ad-personalization pipeline and cutting
+			      off request metadata Amazon can log.
 
-Mobile CDN - Makes mobile networks faster - but it comes at a cost of no privacy
-mobile-consent-manager.s3.amazonaws.com
-
+					(Domain Listed here)
+					 - mobile-consent-manager.s3.amazonaws.com
+					
+					
+					()
