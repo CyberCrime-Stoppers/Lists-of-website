@@ -1,15 +1,21 @@
 
-Google Connection with Android and it's Components 
-android.apis.google.com
+	* function: Google Play Services API gateway (part of the push notification pipeline)
+	
+	    * What that means practically:
+	    
+	    ** When an app on your phone wants to receive push notifications, the developer's server sends the message to Google's FCM servers
+	    
+	    *** Your device maintains a persistent connection to Google's push infrastructure, and android.apis.google.com serves as an API 
+	       access point used by Play Services during this process (registration, token issuance, connection setup)
+	    
+	    **** Description: It's the bridge between Android system components and Google's backend APIs — most notably as a required component for the 
+	         FCM push notification system, plus general Google API access from Play Services (Maps, account sign-in, etc.) 
+	    
+	   		- android.apis.google.com
 
+ 	* Under the hood of Androids OS System - with Google.txt
+     		- firebaseinstallations.googleapis.com
 
-Google Android(s) Notification System -- Google tracks and Reads Android Users Notifications
-path1.xtracloud.net
-path2.xtracloud.net
-path3.xtracloud.net
-
-Under the hood of Androids OS System - with Google
-firebaseinstallations.googleapis.com
-
-Android Mobile Verification System. to communicate back to Google Head Courters.
-phonedeviceverification-pa.googleapis.com
+	* Android Mobile Verification System. _ to communicate back to Google Head Courters.
+		- phonedeviceverification-pa.googleapis.com
+	
