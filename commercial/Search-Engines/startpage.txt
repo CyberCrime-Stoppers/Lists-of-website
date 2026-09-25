@@ -3,5 +3,9 @@ startpage.com
 www.startpage.com
 
 
+Countries
+europe: eu.startpage.com
+United Kingdom:: uk.startpage.com
+
 
 cdn.startpage.com
