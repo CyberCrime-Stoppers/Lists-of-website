@@ -1,0 +1,17 @@
+	
+	
+	* WhatsApp. _
+		- whatsapp.com
+		- dit.whatsapp.net
+		- g.whatsapp.net
+		- g-fallback.whatsapp.net
+		- g.whatsapp.net
+		- api.whatsapp.net
+		- e1.whatsapp.net
+		- e2.whatsapp.net
+		- e3.whatsapp.net
+		- e4.whatsapp.net
+		- e5.whatsapp.net
+		- e6.whatsapp.net
+		
+		
