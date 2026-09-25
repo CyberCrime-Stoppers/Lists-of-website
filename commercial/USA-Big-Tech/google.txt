@@ -11,11 +11,52 @@
 	    **** Description: It's the bridge between Android system components and Google's backend APIs — most notably as a required component for the 
 	         FCM push notification system, plus general Google API access from Play Services (Maps, account sign-in, etc.) 
 	    
-	   		- android.apis.google.com
+	    			(Domain Listed here)
+				- android.apis.google.com
+				
+				()
 
- 	* Under the hood of Androids OS System - with Google.txt
-     		- firebaseinstallations.googleapis.com
+ 	* function: Firebase Installations Service (FIS) — unique device-app identifier provisioning
+ 	
+ 	    * This is Google's officially documented Firebase endpoint. https://firebase.google.com/docs/projects/manage-installations
+ 	    
+ 	        ** Each installed instance of a Firebase-enabled app gets a Firebase Installation ID (FID) — a unique identifier tied to one app install on one device
+ 	
+ 	        ** The FID is used to: authenticate client requests to Firebase servers, perform user segmentation, drive message delivery 
+ 	           (FCM tokens are derived from it), do performance monitoring, count unique users, and select which Remote Config values a device receives
+ 	    
+ 	        ** The https://trackers.tweasel.org/t/google/firebaseinstallations | documents that client requests to this endpoint transmit headers containing your device model name, 
+ 	           Android SDK version, and the exact Firebase SDKs the app bundles
+ 	      
+ 	      	    *** Description: The identity/registration layer of Firebase 
+ 	      	        an opt-in-per-app Google SDK that provisions tracking-capable identifiers for each app installation.
+ 	      
+ 	    			(Domain Listed here)
+     				- firebaseinstallations.googleapis.com
+				
+				()
+	
+	* function: Device attestation / anti-abuse verification ("pa" = Private Access, a Google internal API naming convention)
+	    
+	    * The -pa suffix denotes Google's internal "Private Access" API tier. This endpoint is contacted by Google Play Services 
+	      to verify the integrity and legitimacy of a device — the family of endpoints that support things like:
+	    
+	        ** Play Integrity / SafetyNet-style device attestation — proving to a server that a device is a genuine, uncertified/unrooted Android device
+	
+                ** Device check-ins during account sign-in — confirming the physical device matches the account attempting to authenticate 
+	
+	        ** Anti-abuse checks — determining whether the "phone" presenting itself is a real handheld device vs. an emulator, 
+	           bot farm, or cloned identity (this is how Google combats bulk account creation and SMS-interception fraud rings)
+	          
+	          *** description: A device-identity and integrity verification endpoint used by Play Services to prove/validate what kind of device is talking to Google — 
+	              it's defensive infrastructure (anti-fraud, anti-bot), though the flip side is it does send device fingerprints to Google to accomplish that. 
+	              "Headquarters communication" isn't wrong as a description of the data flow; it's just that the payload is device attestation data, not notification content.
 
-	* Android Mobile Verification System. _ to communicate back to Google Head Courters.
-		- phonedeviceverification-pa.googleapis.com
+
+	      
+	      
+				(Domain Listed here)
+				- phonedeviceverification-pa.googleapis.com
+				
+				()
 	
