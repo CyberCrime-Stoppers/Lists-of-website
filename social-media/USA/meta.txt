@@ -1,0 +1,48 @@
+# --- Tier 1: cross-site tracking (block unconditionally, zero legit breakage) ---
+connect.facebook.net
+*.facebook.net
+*.facebook.com/plugins/*
+graph.facebook.com             # Pixel/API reporting endpoints
+pixel.facebook.com
+
+# --- Tier 2: platform cores (block unless household depends on them) ---
+facebook.com
+messenger.com
+instagram.com
+threads.net
+fb.com / fb.me
+
+# --- Tier 3: functional (family-policy dependent) ---
+web.whatsapp.com               # browser client
+*.whatsapp.net                 # mobile relay infrastructure
+*.fbcdn.net                    # NOTE: blocks ALL embedded FB/IG media on third-party sites
+
+meta.com
+metacritic.com
+metamask.io
+
+
+facebook.com
+facebook.net
+
+whatsapp.com
+whatsapp.net
+
+
+
+WhatsAPP - Components domains for Within WhatsApp Android/Web App 
+e1.whatsapp.net
+e2.whatsapp.net
+e3.whatsapp.net
+e4.whatsapp.net
+e5.whatsapp.net
+e6.whatsapp.net
+e7.whatsapp.net
+e8.whatsapp.net
+e9.whatsapp.net
+e10.whatsapp.net
+e11.whatsapp.net
+e13.whatsapp.net
+e14.whatsapp.net
+
+g.whatsapp.net

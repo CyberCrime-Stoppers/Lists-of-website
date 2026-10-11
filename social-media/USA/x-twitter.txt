@@ -1,0 +1,21 @@
+# --- Twitter / X (selective or complete block depending on policy) ---
+twitter.com
+www.twitter.com
+x.com
+www.x.com
+t.co                      # link tracker - high telemetry value
+*.twimg.com               # media CDN (blocks images/videos)
+*.xcdn.xyz                # newer CDN infrastructure
+periscope.tv              # legacy live-streaming
+blog.twitter.com          # blog subdomain
+status.twitter.com        # status page
+help.twitter.com          # help portal (optional, blocks support if needed)
+api.twitter.com           # API endpoint (breaking if you use OAuth)
+mobile.twitter.com
+m.twitter.com
+abs.twimg.com             # asset hosting
+platform.twitter.com      # embedded widgets
+syndication.twitter.com   # tweet embeds
+publish.twitter.com       # publish flow
+ads-twitter.com           # advertising
+ads.x.com                 # advertising (new branding)

@@ -1,0 +1,23 @@
+# --- TikTok / ByteDance core ---
+tiktok.com
+www.tiktok.com
+tiktok.ca
+tiktokv.com
+tiktokv.us
+tiktokcdn.com
+tiktokcdn-us.com
+tiktokcdn-eu.com
+musical.ly
+muscdn.com
+byteoversea.com
+ibyteimg.com
+ipstatp.com
+snssdk.com           # ByteDance ad/analytics SDK
+toutiao.com           # mainland News aggregator
+douyin.com            # domestic TikTok equivalent
+bytedapm.com
+bytedance.com
+bytedns.net
+zego.im               # ByteDance RTC SDK used by apps
+isnssdk.com
+tiktokw.eu.org        # misc mirrors
