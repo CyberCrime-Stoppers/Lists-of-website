@@ -1,0 +1,37 @@
+Category	                       Risk Profile
+#Malware/platform                     compromise Very low — signed firmware chain, controlled app distribution
+
+#Telemetry	                          Lower than peers — this is documented, not marketing. Apple's differentiators that hold up under scrutiny: on-device processing for Siri suggestions/photos/typing
+                                      (data never leaves the device), differential privacy aggregation, Intelligent Tracking Prevention actively breaking third-party trackers in Safari, Private Relay (iCloud+ feature) obscuring browsing from both carriers and Apple. Their business model is hardware sales, not ad inventory — Google and Meta monetize your data; Apple monetizes your devices
+
+#Cross-site tracking	              Minimal — Apple is not an ad network. They accepted Google's billions to keep Google as default Safari search, which is a business arrangement, not a tracking integration
+
+#Jurisdiction	                      US, CLOUD Act — same as the rest. This is where Apple's privacy posture weakens: much iCloud data (email, iCloud Drive photos in standard configuration, backups) is accessible to Apple and
+                                      thus subpoenaable, because full end-to-end encryption only covers a subset (iMessage, HomeKit, HealthKit, passwords) by default. The Advanced Data Protection option
+                                      extends E2EE broadly but must be opted in
+
+#China concessions	                  Worth remembering given your provenance-based threat model: iCloud China-region data is operated by GCBD (state-linked entity),
+                                      and Apple has complied with app-store takedown demands. Doesn't affect Canadian accounts, but speaks to corporate willingness to comply under pressure
+#Shazam specifics	                  Audio fingerprints, location, and usage patterns are collected. Apple kept it operating as a free service post-acquisition — meaning the data flow continues
+                                      to Cupertino instead of an independent Shazam Ltd.
+
+
+# --- Apple: Tier 1 - TRACKING/DATA COLLECTION (block unconditionally) ---
+shazam.com
+*.shazam.com                   # audio fingerprinting service - pure data collection
+*.shazamid.com
+*.shazammenow.com
+iadsdk.apple.com               # Apple's (small) ad framework
+*.ess.apple.com                # limited analytics if no Apple devices present
+crashlytics.com                # NOTE: owned by Google now - Firebase, block anyway
+adcdownload.apple.com          # dev telemetry if unused
+
+# --- Apple: Tier 2 - SERVICES (block if no household Apple usage) ---
+itunes.com                     # zombie redirect - block freely, zero breakage
+appletv.com                    # marketing domain - block if no TV+ subscription
+tv.apple.com                   # Apple TV+ - subscription-dependent
+music.apple.com                # Apple Music - subscription-dependent
+apple.com / *.apple.com        # apex - device-dependent
+*.mzstatic.com                 # media CDN - device/subscription-dependent
+*.apple-cloudkit.com           # iCloud - device-dependent
+gc.apple.com                   # push notifications - device-dependent (REQUIRED if iPhones exist)s
