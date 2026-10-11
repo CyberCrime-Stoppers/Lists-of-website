@@ -1,0 +1,33 @@
+#Category	                      Risk Profile
+#Historical breaches 	             Legendary catastrophe — the 2013–2014 Yahoo breach exposed 3 billion accounts (passwords, birthdates, security questions). This is the largest single breach in history, and it was disclosed #after Verizon's                     acquisition negotiations. Any account created before ~2017 is fundamentally untrustworthy.
+#Current security posture            Moderate — TLS everywhere, 2FA available, but infrastructure is aging. Password hashing practices improved post-breach but lag modern standards
+#Telemetry                           Moderate — behavioral tracking across Yahoo properties, search logs retained. No cross-web pixel infrastructure like Facebook/Google
+#Third-party                         dependency	Low — Yahoo/Bing search powers DuckDuckGo and other privacy engines; some older websites embed Yahoo widgets, but nothing on Google's scale
+#Jurisdiction	                     US, CLOUD Act — same as everyone else
+#Email forwarding risk               Yahoo Mail allows forwarding rules that can silently exfiltrate mail. Old accounts are high-value targets for credential stuffing attacks
+
+
+# --- Yahoo/AOL: Legacy Email/Search (low-tech-risk, high-data-risk) ---
+
+# Tier 1: Unconditional blocks (pure telemetry/ads, zero collateral)
+*.flurry.com             # Yahoo mobile analytics (used by third-party apps)
+*.yahoo.net              # CDN - optional, can block on servers
+advertising.yaho...      # ad delivery endpoints
+analytics.yahoo.com      # tracking
+
+# Tier 2: Policy-dependent (block if no household usage)
+yahoo.com
+www.yahoo.com
+mail.yahoo.com
+*.yahoomail.com
+*.yahoosearch.com
+ca.yahoo.com
+us.yahoo.com
+search.yahoo.com
+aol.com
+*.aol.com
+login.aol.com            # account portal
+*.aim.com                # legacy instant messenger - zombie
+
+# Tier 3: Shared infrastructure (too hot to wildcard-block)
+*.ymail.com              # redirect domain - blocks if no mail usage
