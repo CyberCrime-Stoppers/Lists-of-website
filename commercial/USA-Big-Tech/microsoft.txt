@@ -41,3 +41,11 @@ account.microsoft.com              # account management
 *.azureedge.net                    # fronts third-party content
 *.azurefd.net
 *.cloudapp.net                     # Azure PaaS - enormous third-party surface
+
+#--- Windows Telemetry ---
+
+vortex.data.microsoft.com
+settings-win.data.microsoft.com
+watson.telemetry.microsoft.com
+browser.pipe.aria.microsoft.com
+*.mobile.events.data.microsoft.com
