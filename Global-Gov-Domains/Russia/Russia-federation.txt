@@ -1,0 +1,46 @@
+Domain Type	Examples        	Operator
+Federal government	             kremlin.ru, government.ru, gov.ru	Presidential administration, cabinet
+Ministries	                     mid.ru (Foreign Affairs), mil.ru (Defense), mvd.ru (Interior), fsb.ru	Ministries/FSB
+State services portal	         gosuslugi.ru	Unified citizen services (Russian IRS+ServiceOntario equivalent)
+Legislative	                     duma.gov.ru, council.gov.ru	Parliament chambers
+Military/intel	                 .mil.ru, svr.gov.ru, gru.mil.ru	Ministry of Defense, SVR, GRU
+State media	                     rt.com, ria.ru, tass.ru, sputniknews.com	Propaganda arms
+CERT	                         cert.gov.ru	National CERT
+
+
+# --- Russian Federation: HOSTILE JURISDICTION - BLOCK EVERYTHING ---
+
+# Tier 0: Total block (all VLANs, all devices)
+*.ru                        # entire ccTLD — see caveat below on collateral
+*.su                        # SOVIET-ERA LEGACY TLD - famously cheap, abused for malware
+*.рф                       # Cyrillic IDN — punycode xn--p1ai
+
+# Government/state (covered by .ru wildcard, listed for documentation)
+kremlin.ru
+government.ru
+gov.ru
+gosuslugi.ru
+mil.ru
+fsb.ru
+svr.gov.ru
+mid.ru
+mvd.ru
+
+# State media (com domains — must block explicitly, NOT covered by .ru)
+rt.com                      # Russia Today - banned in Canada/EU
+russian.rt.com
+ria.ru
+tass.com / tass.ru
+sputniknews.com
+sputnikglobe.com
+
+# Russian tech/software (explicit .com entries)
+yandex.com / yandex.ru      # state-adjacent, SORM-accessible
+mail.ru
+vk.com / vk.ru             # state-controlled social network
+kaspersky.com               # see note below
+mega.nz? NO - Kim Dotcom, not Russian
+
+# Bulletproof hosting frequently-abused ranges (ER605 CIDR level)
+# Pull current lists from FireHOL/spamhaus drop - I can't reliably
+# recite current CIDRs, and stale ranges cause false-positive blocks
