@@ -1,0 +1,24 @@
+# --- US Government (.gov, .mil): Jurisdictional risk, low technical risk ---
+
+# Tier 1: Unconditional block (server/IoT VLANs, no household need)
+*.gov              # wildcard safe — .gov is strictly controlled, no third-party SDKs
+*.mil
+*.state.gov
+*.defense.gov
+*.justice.gov
+*.treasury.gov
+*.irs.gov
+*.cisa.gov
+
+# Tier 2: Policy-dependent (allow for travel/documents if needed)
+travel.state.gov    # passport/visa
+uscis.gov           # immigration
+passport.state.gov
+
+# Tier 3: Research-only mirrors (acceptable alternatives)
+mitre.org           # CVE database (US-based but open research)
+nist.gov            # security standards (mirror via archive.org if needed)
+cve.mitre.org       # vulnerability tracking
+
+# Note: Blocking .gov does NOT prevent Five Eyes surveillance
+# The data collection happens at network interception level, not .gov domain level
