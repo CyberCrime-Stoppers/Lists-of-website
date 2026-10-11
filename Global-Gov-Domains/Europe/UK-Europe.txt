@@ -1,0 +1,60 @@
+
+
+Country                   Domain Patterns	Examples
+Germany	                     *.bundesregierung.de, *.bund.de, *.gov.de	auswaertiges-amt.gov.de, bundestag.de
+France	                     *.gouv.fr, *.service-public.fr	laposte.gouv.fr, numerique.gouv.fr
+UK	                         *.gov.uk	gov.uk, homeoffice.gov.uk
+Netherlands	                 *.rijksoverheid.nl, *.government.nl	rijksdienst.nl
+Canada-aligned	             *.gc.ca, *.canada.ca	canada.ca, cse-cst.gc.ca
+EU institutions	             *.europa.eu, *.ec.europa.eu	commission.ec.europa.eu, eparliament.eu
+Nordic	Country-specific     (.gov.se, .gov.dk, .gov.fi)	skatteverket.se, tulli.fi
+
+
+Country	                                Gov Domains	Block Priority	Rationale
+UK	                                         .gov.uk	⚠️⚠️ (Same as US)	Five Eyes member, GCHQ intelligence sharing
+Germany	                                     .gov.de, .bund.de	⚠️ (Optional)	GDPR-protected, no Five Eyes treaty
+France	                                     .gouv.fr	⚠️ (Optional)	GDPR-protected, limited intel cooperation
+Netherlands	                                 .gov.nl, .rijksoverheid.nl	⚠️ (Optional)	Part of 14 Eyes but not full SIGINT sharing
+EU institutions	                             .europa.eu, .ec.europa.eu	✓ (Safe)	Purely informational, GDPR-bound
+Canada	                                     .gc.ca, .canada.ca	⚠️ (Contextual)	Your own jurisdiction — CSE is SIGINT, but domestic
+
+
+
+# --- European Government: Variable jurisdiction, low technical risk ---
+
+# Tier 1: Five Eyes-equivalent (block same as US .gov)
+*.gov.uk                # UK Five Eyes - same CSEC/GCHQ exposure
+*.police.uk             # UK law enforcement
+*.homeoffice.gov.uk
+*.fcdo.gov.uk
+
+# Tier 2: GDPR-protected but 14 Eyes (policy-dependent)
+*.gouv.fr               # France - DGSE surveillance, not Five Eyes
+*.gouv.qc.ca            # Quebec provincial (Canadian - your jurisdiction)
+*.gc.ca                 # Canada federal - domestic SIGINT (CSE)
+*.canada.ca
+*.cse-cst.gc.ca         # Canadian Centre for Cyber Security
+*.crtc.gc.ca
+
+# Tier 3: Low-risk (EU institutions, optional allow)
+*.europa.eu             # EU Parliament/Commission - informational only
+*.ec.europa.eu          # European Commission
+*.eu.int                # EU institutional domains
+*.enisa.europa.eu       # EU Cybersecurity Agency (research value)
+*.ecdc.europa.eu        # EU Health/Health Security
+
+# Tier 4: Country-specific (explicit listing only, no wildcards)
+# Germany
+www.bundesregierung.de
+auswaertiges-amt.gov.de
+bundestag.de
+
+# Netherlands
+www.rijksoverheid.nl
+rijkswacht.nl
+minfin.nl
+
+# Nordic (generally high trust, low telemetry)
+www.skatteverket.se     # Swedish Tax Authority
+www.tulli.fi            # Finnish Customs
+www.politi.dk           # Danish Police
