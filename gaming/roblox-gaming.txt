@@ -1,0 +1,9 @@
+# --- Roblox scam/phishing infrastructure (block regardless of play policy) ---
+roblox.com              # apex - consider blocking only on server VLANs
+rbxcdn.com              # legitimate CDN - block on servers only
+freerobuxgenerator.*   # classic scam pattern family (wildcards via regex on Pi-hole)
+robux.*
+blox.land
+bloxcity.com            # historic clone/phish domains
+rbxgold.com             # gambling-adjacent scam sites
+rolimon's scam mirrors  # trading scams on fake Rolimon's lookalikes

@@ -1,0 +1,22 @@
+#Factor	                         Why Web Search Matters
+#Domain age/registration	     Newer domains carry higher risk (less established history, potential typosquatting)
+#Active purpose	                 Is it gaming, file sharing, streaming, or something else? Each carries different threat profiles
+#Security reputation	         Malware databases (VirusTotal, URLVoid, Sucuri SiteCheck) have varying reports I can't access
+#Geographic/hosting              info Where's the server located? What ISP/CDN? Some jurisdictions warrant extra scrutiny
+#Associated services	         Any known partnerships, SDKs, or third-party integrations?
+
+
+# 1. WHOIS lookup - registration date and registrant country
+whois andkon.com
+
+# 2. DNS records - check hosting infrastructure
+dig a andkon.com
+dig mx andkon.com
+dig txt andkon.com
+
+# 3. SSL certificate issuer
+openssl s_client -connect andkon.com:443 2>/dev/null | openssl x509 -noout -issuer
+
+# 4. VirusTotal / URL scanners
+# (curl equivalent or manual check on virustotal.com)
+
