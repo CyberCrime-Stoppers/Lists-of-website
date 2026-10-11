@@ -1,0 +1,43 @@
+#Category	                          Risk Profile
+#Malware/platform                       compromise	Very low — signed binaries, world-class infrastructure
+#Telemetry	                            High and structural — Windows diagnostic data, Defender sample submission (automatic MAPS membership), advertising ID, app usage, typing/inking telemetry. This is baked into the OS, not a #website — DNS                        blocking is whack-a-mole for it
+#Jurisdiction	                        US, CLOUD Act — Microsoft is a known NSL recipient (the 2013–ongoing gag-order litigation made that famous). No Canadian advantage
+#Dependency                             lock-in	Extreme — unlike TikTok/Meta, breaking this breaks functionality you rely on
+#Shared                                 infrastructure hazard	*.azureedge.net and azurefd.net front enormous amounts of third-party content. Wildcard-blocking these breaks
+#                                       legitimate unrelated services — treat them like googleapis.com: too hot to block
+
+
+
+# --- Microsoft: Tier 1 - TELEMETRY ONLY (block freely, minimal breakage) ---
+vortex.data.microsoft.com
+settings-win.data.microsoft.com
+watson.telemetry.microsoft.com
+watson.events.data.microsoft.com
+telemetry.microsoft.com
+*.mobile.events.data.microsoft.com
+browser.pipe.aria.microsoft.com     # Office telemetry
+*.telecommand.telemetry.microsoft.com
+ecn.dev.virtualearth.net           # Maps/location telemetry (unless using Bing Maps)
+smartscreen-prod.microsoft.com     # NOTE: optional - SmartScreen URL reputation checks
+
+# --- Microsoft: Tier 2 - NICE TO BLOCK (cosmetic/ads, minor breakage) ---
+choice.microsoft.com               # ad personalization settings
+ads.microsoft.com
+bing.com                           # optional - search engine, family-policy
+*-radar.cloudapp.net               # diagnostics radar
+
+# --- Microsoft: Tier 3 - FUNCTIONAL - DO NOT BLOCK on Windows/Xbox devices ---
+login.live.com                     # auth backbone
+login.microsoftonline.com          # AAD/Office auth
+*.windowsupdate.com                # patch delivery
+update.microsoft.com               # update metadata
+dl.delivery.mp.microsoft.com       # drivers
+*.xboxlive.com                      # Xbox Live
+msftconnecttest.com                # NCSI connectivity checks
+onedrive.com / *.1drv.com          # if used
+account.microsoft.com              # account management
+
+# --- Microsoft: TOO HOT TO BLOCK (shared infra) ---
+*.azureedge.net                    # fronts third-party content
+*.azurefd.net
+*.cloudapp.net                     # Azure PaaS - enormous third-party surface
