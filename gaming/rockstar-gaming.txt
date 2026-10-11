@@ -1,0 +1,6 @@
+# --- Rockstar Games (gaming content, age-dependent access) ---
+rockstargames.com
+www.rockstargames.com
+socialclub.rockstargames.com
+launchers.rockstargames.com
+*.rockstargames.net
