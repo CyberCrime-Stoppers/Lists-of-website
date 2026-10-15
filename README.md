@@ -1,4 +1,4 @@
- # Learn and Discover domains & emails you may have not know about.
+ # Learn and Discover domains & emails you may have not known about.
  ### Useful for Firewall and DNS Blocking or any IT Specialist to use.
  
  <br>
@@ -16,3 +16,7 @@
 <br>
 
  > At the heart of this practice is a simple principle: bettering your security is an ongoing process, not a one-time setup. Domains change, services rotate their senders, and new tracking infrastructure appears faster than most people can follow — but every blocklist you curate, every DNS query you audit, and every questionable domain you investigate compounds into a stronger, more private network over time. Doing what's best for your networks means staying curious, verifying rather than assuming, and refusing to let unknown traffic pass simply because it hasn't caused a problem yet. The strongest security posture isn't reactive — it's informed, deliberate, and maintained.
+
+   
+
+ 
