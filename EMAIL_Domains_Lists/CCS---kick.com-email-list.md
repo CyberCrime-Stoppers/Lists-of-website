@@ -1,0 +1,46 @@
+## Kick.com Official Email Addresses (verified from help.kick.com)
+
+| Department | Email |
+|------------|-------|
+| General Support | `support@kick.com` |
+| Technical Support | `techsupport@kick.com` |
+| Subscription Enquiries | `subscriptions@kick.com` |
+| Partnership Enquiries | `kickpartners@kick.com` |
+| Ban Appeals | `appeals@kick.com` |
+| Business Enquiries | `business@kick.com` |
+| Career Opportunities | `careers@kick.com` |
+| Verified Streamer Applications | `verify@kick.com` |
+| **Youth Protection Officer** | `youthprotectionofficer@kick.com` |
+| Press Enquiries | `press@kick.com` |
+| **Cyber Security** | `security@kick.com` |
+| Account Recovery | `recovery@kick.com` |
+
+## DMCA / Legal (from kick.com/dmca-policy)
+
+| Purpose | Email |
+|---------|-------|
+| DMCA takedown notices | `dmca@kick.com` |
+| DMCA counter-notices | `dmca@kick.com` (same mailbox handles both) |
+| Bot/viewbotting reports on channels | `support@kick.com` (per their Community Guidelines) |
+
+## Notes for Your Catalogue
+
+**Domain:** All addresses live on `kick.com` — no separate corporate mail domain observed (unlike larger companies that split off `@companyname.com` for staff).
+
+**Tracking observation:** The Help Center page loads assets from `intercomcdn.com` (Intercom, US) — that's another third-party tracker dependency to add alongside Google Analytics and DoubleClick for the Kick cluster:
+
+```
+intercom.com
+*.intercom.com
+intercomcdn.com
+*.intercomcdn.com
+```
+
+**Security relevance for your work:**
+- `security@kick.com` exists specifically for vulnerability reports — since you're on the defensive side, that's your contact point if you ever find issues on their platform.
+- `youthprotectionofficer@kick.com` reflects gambling-content exposure concerns — some jurisdictions require this officer role.
+- **Phishing warning:** Because all legit Kick mail comes from `@kick.com`, any "Kick gift card", "Kick partnership offer", or "account suspension" email arriving from `kick-secure.com`, `kick-support.net`, `kickstream.co` or similar lookalike domains is almost certainly a scam. Worth flagging for CyberCrime-Stoppers awareness content — streaming-platform impersonation scams targeting creators (fake brand-deal emails) are a known pattern.
+- I don't have verified records of fraudulent Kick-impersonation domains actively in circulation, so treat that last point as a caution based on general scam patterns rather than confirmed incidents.
+
+**Ownership attribution for your records:** All these belong to Kick Streaming Pty Ltd ← Easygo Entertainment Pty Ltd (Melbourne, Australia), the same cluster as Stake.com.
+
