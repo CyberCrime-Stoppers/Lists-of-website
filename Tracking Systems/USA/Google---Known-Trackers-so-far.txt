@@ -1,0 +1,29 @@
+catalogged (core wildcards, ads/telemetry set, CC-TLD variants, Play Services chain) and covering what's still missing: subsidiaries, acquisitions, and the obscure delivery infrastructure most blocklists miss.
+
+Registrant-owned backbone (not under google.com):
+
+    *.1e100.net — Google's internal serving backbone. A meaningful share of YouTube/Gmail/Maps traffic terminates on hostnames in this zone. Critically, many Google services fall back to it when their primary domains are blocked — so a Google blocklist without 1e100.net is trivially bypassable by Google itself.
+    *.gvt1.com / *.gvt2.com — binary/content distribution. Chrome installers, Android OTA-style payloads, Play-delivered app bundles route through here. Chrome silent-updates survive a block of update.googleapis.com via gvt fallbacks.
+    *.gcdn.* variants — regional CDN aliases
+    *.googlezip.net — internal transport compression/TLS fronting
+    *.streamkit*.com class frontends where applicable
+
+Acquired companies & subsidiaries (distinct registrants, same operator):
+
+    *.waze.com — crowd-sourced navigation telemetry; collects precise GPS traces by design
+    *.fitbit.com / *.fitbit.ca — health/biometric data (Fitbit acquisition closed 2021); post-acquisition data flows to US jurisdiction
+    *.nest.com / *.nest.ca / *.dropcam.com — smart-home cameras, audio capture
+    *.keyhole.com — legacy Google Earth namespace, still resolves
+    *.deepmind.com — AI research; minimal consumer telemetry
+    *.waymo.com — autonomous vehicles
+    *.youtube-nocookie.com — privacy-washing trap: billed as the cookie-free embed path, still reports views to Google; blocking it doesn't break youtube.com proper
+    *.withgoogle.com / *.withartgallery.com — marketing/event properties
+    *.google.org, *.google.ca (direct — distinct from the (&) TLD expansion)
+    *.blogspot.* — Blogger, all CC-TLDs; heavily used for low-reputation hosted content
+    *.blogger.com, *.blog.google — corporate/publishing
+    *.firebaseio.com, *.firebase.google.com, *.firebasestorage.googleapis.com, *.cloudfunctions.net, *.web.app, *.firebaseapp.com — Firebase hosting: same phishing-abuse profile as storage.googleapis.com and appspot.com. Free HTTPS certs on Google's infra make it a favourite for credential harvesting pages
+    *.recaptcha.net / *.grecaptcha.com — reCAPTCHA alternates (recaptcha.net exists specifically for users who've blocked google.com); it still fingerprints browser/device
+    *.fonts.gstatic.com, fonts.googleapis.com (explicitly) — Google Fonts; the cross-site IP-linking vector I flagged earlier
+    *.dl.google.com, *.edgedl.me.gvt1.com, *.redirector.gvt1.com — download mirrors
+    *.page.link — Firebase Dynamic Links (now sunset, still resolving and used in older malware lure chains)
+    *.material.io, *.getmdl.io — dev docs, inert
