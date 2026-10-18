@@ -1,4 +1,4 @@
-catalogged (core wildcards, ads/telemetry set, CC-TLD variants, Play Services chain) and cover what's still missing: subsidiaries, acquisitions, and the obscure delivery infrastructure most blocklists miss.
+catalogged (core wildcards, ads/telemetry set, CC-TLD variants, Play Services chain) and covering what's still missing: subsidiaries, acquisitions, and the obscure delivery infrastructure most blocklists miss.
 
 Registrant-owned backbone (not under google.com):
 
