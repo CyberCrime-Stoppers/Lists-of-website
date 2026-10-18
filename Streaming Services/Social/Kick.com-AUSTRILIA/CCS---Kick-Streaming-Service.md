@@ -119,7 +119,7 @@ Here's the domain footprint for **Kick Streaming** (owned by Kick Streaming Pty 
 
 ## Security Observations
 
-- **Nearly all Kick infrastructure sits behind Cloudflare** — meaning TLS-encrypted proxied traffic that's harder to inspect or selectively block at the hostname level. If you want to block Kick wholesale, blocking `*.kick.com` plus the known IPs won't cover Cloudflare-shared ranges (which would break half the internet). DNS-level or Pi-hole/portmaster hostname blocking is the practical route.
+- **Nearly all Kick infrastructure sits behind Cloudflare** — meaning TLS-encrypted proxied traffic that's harder to inspect or selectively block at the hostname level. If you want to block Kick wholesale, blocking `*.kick.com` plus the known IPs won't cover Cloudflare-shared ranges (which would break half the internet). DNS-level or Pi-hole/portmaster/uBlockDNS hostname blocking is the practical route.
 - **`cf_clearance` cookie** appears in their API handshake requirements (visible in the GitHub endpoint documentation) — they use Cloudflare bot protection aggressively.
 - **Third-party dependencies** confirmed: Cloudflare (proxy/CDN), AWS (CloudFront/S3 for files and images), Shopify (merch shop), Statuspage (uptime status).
 - **Sister infrastructure:** Stake.com is the financial backer under the same parent (Easygo Entertainment). If you're cataloguing by operator, Stake's domains belong in the same ownership cluster. I don't have a verified subdomain list for Stake from these results, so I'd want to scan those separately rather than guess.
@@ -169,7 +169,7 @@ Since their privacy policy describes "display advertising" with Google and unnam
 - `googleadservices.com`
 - `adservice.google.com`
 
-I'd verify these empirically rather than take them as gospel — your Portmaster setup is actually the ideal tool for this: load kick.com with logging on and check what gets resolved beyond `*.kick.com`.
+I'd verify these empirically rather than take them as gospel — Safing-Portmaster/Pi-Hole/uBlockDNS setup is actually the ideal tool for this: load kick.com with logging on and check what gets resolved beyond `*.kick.com`.
 
 ## First-Party Tracking Signals (Kick's own)
 
