@@ -7,3 +7,30 @@ blox.land
 bloxcity.com            # historic clone/phish domains
 rbxgold.com             # gambling-adjacent scam sites
 rolimon's scam mirrors  # trading scams on fake Rolimon's lookalikes
+
+
+# === Primary telemetry endpoints ===
+ecsv2.roblox.com                    # Biggest tracker (per DevForum)
+metrics.roblox.com                   # Analytics
+tracing.roblox.com                  # Tracing
+client-telemetry.roblox.com         # Client telemetry
+ephemeralcounters.api.roblox.com    # Client-side counters
+lms.roblox.com                      # Learning/training system
+
+# === Crash reporting ===
+upload.crashes.roblox.com
+upload.crashes.rbxinfra.com
+
+# === Analytics via CDN (confirmed via Roblox FFlag list,
+#     DFStringAnalyticsNS1BeaconConfig) ===
+c0ak.rbxcdn.com
+c0aws.rbxcdn.com
+c0cfly.rbxcdn.com
+
+# === A/B testing (abtesting is a CNAME to gold.roblox.com) ===
+abtesting.roblox.com
+gold.roblox.com
+robloxlabs.com                       # A/B experimentation infra
+
+# === Video ad segments (blocks some in-game video delivery too — judgment call) ===
+hls-segments.rbxcdn.com
