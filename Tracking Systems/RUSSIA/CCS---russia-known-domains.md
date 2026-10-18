@@ -241,10 +241,3 @@ I have gaps on these areas — worth capturing live from packet captures if you'
 | **Torrent/filesharing** | Rutracker.org (blocked in Russia but accessible abroad) |
 | **Anonymous hosting** | Various offshore Russian registrars |
 
-Want me to:
-1. **Continue to China domains** (largest TLD volume after .ru/.su combined)?
-2. **Build the deduplicated master list** combining Google, Meta, and Russian sets?
-3. **Cover China next** (since you're comparing US vs. non-US tech ecosystems)?
-4. **Pull in specific threat intel feeds** for Russian botnet/C2 indicators?
-
-Your call on sequencing.
