@@ -74,7 +74,7 @@ Amazon-Adsystem serves ads on many publisher sites — safe to block wholesale.
 *.adtechjp.com
 *.yieldmo.com
 ```
-Canadian angle worth noting for you: Casale Media and Index Exchange are both Toronto-based — geopolitically neutral but still classic RTB trackers.
+Canadia/USA: Casale Media and Index Exchange are both Toronto-based — geopolitically neutral but still classic RTB trackers.
 
 ## TikTok / Bytedance (China — national-security-grade concern)
 ```
