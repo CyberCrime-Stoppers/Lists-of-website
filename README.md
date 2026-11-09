@@ -1,3 +1,5 @@
+### This Linux App will be for The Linux Destribution that is being developed by 'C.C.S Scott Dev' also will work for other linux distros
+
  # Learn and Discover domains & emails you may have not known about.
  ### Useful for Firewall and DNS Blocking or any IT Specialist to use.
  
