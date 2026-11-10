@@ -20,3 +20,11 @@
 | Mail | mx1/mx2/mx3.larksuite.com | Lark Suite (ByteDance) | 🇸🇬/🇨🇳 |
 | SPF | `spf.onlarksuite.com` | Lark Suite | 🇸🇬/🇨🇳 |
 | Evidence token | `verification-code-site-App_lark=J1WFT2mLmS0mmOJowNUI` | tenant-specific | — |
+
+ - Scam's emails
+
+### laval3@kasajapo.com
+
+### no-reply.3v4NV@ysse.goe.go.kr
+
+### mobility4@kasajapo.com
